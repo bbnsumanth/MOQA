@@ -14,12 +14,12 @@ stemmer 	= SnowballStemmer("english")
 
 class Mapping:
 
-	def __init__(self, QAfile, ReviewFile, minReview):
+	def __init__(self, QAfile, ReviewFile, minReview, V):
 
 		self.QAfile 		= QAfile
 		self.ReviewFile 	= ReviewFile
 		self.minReview		= minReview
-		self.V 			= 5000
+		self.V 			= V
 		self.Vocublary  	= defaultdict(int)
 		self.WordIDMap  	= {}
 		self.RWordIDMap  	= {}

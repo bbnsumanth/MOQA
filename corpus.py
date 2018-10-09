@@ -13,9 +13,9 @@ from documents import QAdoc, ReviewDoc, Sentence
 
 class Corpus:
 
-    def __init__(self, QAFile, ReviewFile, minReview):
+    def __init__(self, QAFile, ReviewFile, minReview,V):
 
-        self.Map 				= Mapping(QAFile, ReviewFile, minReview)
+        self.Map 				= Mapping(QAFile, ReviewFile, minReview,V)
         self.QAnswers  				= []
         self.Sentences 				= []
         self.QPerItem  				= []
