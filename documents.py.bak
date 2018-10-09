@@ -43,7 +43,7 @@ class QAdoc:
 
             else:
                 self.aFeature[wordId] = np.float64(1)
-        print((self.qFeature))
+        print(self.qFeature)
         normalize(self.qFeature)
         normalize(self.aFeature)
 

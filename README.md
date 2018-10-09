@@ -27,6 +27,8 @@ python main.py qa_file.json.gz reviews_file.json.gz min_reviews k num_iter lambd
      * `qa_file.json.gz`: name of file containing the community Q/A data in the format specified in [this link][4]
      * `reviews_file.json.gz`: name of file containing the community Review data in the format specified in [this link][5]
      * `min_reviews`: Minimum number of reviews for an item to be considered. By default set to 1.
+     * `V`: Min Vocab to consider(eg: 10000). If need to compute the vocab based on the min occurance frequency - give the min occurance in negative value (eg: -5 => will consider all the words in Vocan oif they occur min 5 times), 
+     * `k`: lower Rank of the matrix to transform the sparse matrix of Vocab Rank 
      * `num_iter`: Number of iterations you want to train the model. By default the number of iterations is 100 as told by author in [paper][1]
      * `lambda`: The regularization parameter. By default it is set to 0 i.e no regualarization.
      * `MostRelevant.txt`: name of the file in which the most relevant reviews corresponding to the queries in the test dataset is stored.

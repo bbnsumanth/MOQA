@@ -260,7 +260,7 @@ class Model:
 
         for i in range(self.Items):
 
-            print("Creating data for ",i)
+            print "Creating data for ",i
 
             'Calculating Sparse Question Features'
             indices = []
@@ -413,7 +413,7 @@ class Model:
         max_na 		= 1000
 
         for q in range(nq):
-            print("Calculating AUC for ",q)
+            print "Calculating AUC for ",q
 
             if q < test:
                 na_start 	= 0
@@ -652,15 +652,15 @@ class Model:
             accuracy 		= (accuracy_count * 1.0) / count
             valid, test, topRanked 	= self.valid_test_perf(sess)
 
-            print("For Training Epoch ", i) 
-            print("--------------------------------------")
-            print("Training Data:")
-            print("\tlog_likelihood: ", log_likelihood)
-            print("\taccuracy: ", accuracy)
-            print("Valid Data:")
-            print("\taccuracy: ", valid)
-            print("Test Data:")
-            print("\taccuracy: ", test) 
-            print("--------------------------------------")
+            print "For Training Epoch ", i 
+            print "--------------------------------------"
+            print "Training Data:"
+            print "\tlog_likelihood: ", log_likelihood
+            print "\taccuracy: ", accuracy
+            print "Valid Data:"
+            print "\taccuracy: ", valid
+            print "Test Data:"
+            print "\taccuracy: ", test 
+            print "--------------------------------------"
 
         return sess

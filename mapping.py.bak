@@ -58,7 +58,7 @@ class Mapping:
 		del qa
 		print("Read Question Answer\n")
 
-		print(("Number of Items for which there exists a questions\n", len(ItemsToMaybeKeep)))
+		print("Number of Items for which there exists a questions\n", len(ItemsToMaybeKeep))
 
 		print("Reading Reviews")
 		review = gzip.open(self.ReviewFile, 'r')
@@ -82,29 +82,29 @@ class Mapping:
 
 		count 	= 0
 
-		for (key,value) in list(ItemsToMaybeKeep.items()):
+		for (key,value) in ItemsToMaybeKeep.items():
 			if value >= self.minReview:
 				self.ItemIDMap[key] 	= count
 				self.RItemIDMap[count] 	= key
 				count 			= count + 1
 
-		temp_vocab = sorted(list(self.Vocublary.items()), key = operator.itemgetter(1))
+		temp_vocab = sorted(self.Vocublary.items(), key = operator.itemgetter(1))
 
 		if (len(temp_vocab) > 5000):
-			print(("Pre-sorting Vocublary length is %d"%(len(temp_vocab))))
+			print("Pre-sorting Vocublary length is %d"%(len(temp_vocab)))
 			temp_vocab = temp_vocab[len(temp_vocab)-5000:]
 
 		self.Vocublary 	= dict(temp_vocab)
 		self.V 		= len(self.Vocublary)
 		count 		= 0
 
-		for (key,value) in list(self.Vocublary.items()):
+		for (key,value) in self.Vocublary.items():
 
 			self.WordIDMap[key] 	= count
 			self.RWordIDMap[count] 	= key
 			count 			= count + 1
 
-		X = sorted(list(self.Vocublary.items()), key = operator.itemgetter(1))
+		X = sorted(self.Vocublary.items(), key = operator.itemgetter(1))
 
 		#Uncomment this for printing out the Vocubalary. It was used during different model testing
 		'''

@@ -30,8 +30,8 @@ def check_sent(sent, WordIDMap):
 
 def normalize(feature):
 
-    L 	= list(feature.values())
+    L 	= feature.values()
     norm 	= np.sqrt(np.sum(np.power(L, 2)))
 
-    for k, v  in list(feature.items()):
+    for k, v  in feature.items():
         feature[k] = v/norm
